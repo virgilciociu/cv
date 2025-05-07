@@ -1,0 +1,116 @@
+/* Color Variables */
+:root {
+  --color-white: #fff;
+  --color-malibu: #88CEF7;
+  --color-coral-red: #F93442;
+  --color-apple: #33B540;
+  --color-yellow-orange: #FEBB43;
+  --color-pumpkin: #FF791C;
+  --color-lavender: #CE73D5;
+  --color-cerulean: #0f8ed6;
+  --color-teal-blue: #074569;
+  --color-wild-sand: #F5F5F5;
+  --color-mine-shaft: #333333;
+  --color-cod-gray: #1A1A1A;
+}
+
+:root {
+  --box-radius: 20px;
+}
+
+/* Social Icon */
+[class^="social__icon"] {
+  padding-top: 100%;
+  border-radius: 50%;
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease, background-color 0.3s ease;
+}
+
+/* Default Colors */
+.social__icon--red {
+  background-color: var(--color-coral-red);
+}
+
+.social__icon--green {
+  background-color: var(--color-apple);
+}
+
+.social__icon--yellow {
+  background-color: var(--color-yellow-orange);
+}
+
+.social__icon--orange {
+  background-color: var(--color-pumpkin);
+}
+
+.social__icon--purple {
+  background-color: var(--color-lavender);
+}
+
+/* Hover Effects - Change Color & Animation */
+.social__icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect - Change Background Colors */
+.social__icon--red:hover {
+  background-color: var(--color-yellow-orange);
+}
+
+.social__icon--green:hover {
+  background-color: var(--color-malibu);
+}
+
+.social__icon--yellow:hover {
+  background-color: var(--color-coral-red);
+}
+
+.social__icon--orange:hover {
+  background-color: var(--color-lavender);
+}
+
+.social__icon--purple:hover {
+  background-color: var(--color-cerulean);
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-cerulean);
+  color: var(--color-white);
+  padding: 48px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer__link {
+  color: var(--color-wild-sand);
+  text-decoration: none;
+}
+
+.footer__link:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer__copy {
+  margin-top: 36px;
+}
+
+/* Background Image Swap for GitHub */
+.social__icon[data-icon="github"] {
+  background-image: url('image/github.png');
+}
+
+.social__icon[data-icon="github"]:hover {
+  background-image: url('image/github-hover.png');
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__copy {
+    margin-top: 0;
+  }
+}
