@@ -29,52 +29,23 @@
 }
 
 /* Default Colors */
-.social__icon--red {
-  background-color: var(--color-coral-red);
-}
+.social__icon--red { background-color: var(--color-coral-red); }
+.social__icon--green { background-color: var(--color-apple); }
+.social__icon--yellow { background-color: var(--color-yellow-orange); }
+.social__icon--orange { background-color: var(--color-pumpkin); }
+.social__icon--purple { background-color: var(--color-lavender); }
 
-.social__icon--green {
-  background-color: var(--color-apple);
-}
-
-.social__icon--yellow {
-  background-color: var(--color-yellow-orange);
-}
-
-.social__icon--orange {
-  background-color: var(--color-pumpkin);
-}
-
-.social__icon--purple {
-  background-color: var(--color-lavender);
-}
-
-/* Hover Effects - Change Color & Animation */
+/* Hover Effects - Apply Bounce Animation */
 .social__icon:hover {
-  transform: scale(1.2) rotate(5deg);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  animation: bounce 0.5s ease;
 }
 
 /* Hover Effect - Change Background Colors */
-.social__icon--red:hover {
-  background-color: var(--color-yellow-orange);
-}
-
-.social__icon--green:hover {
-  background-color: var(--color-malibu);
-}
-
-.social__icon--yellow:hover {
-  background-color: var(--color-coral-red);
-}
-
-.social__icon--orange:hover {
-  background-color: var(--color-lavender);
-}
-
-.social__icon--purple:hover {
-  background-color: var(--color-cerulean);
-}
+.social__icon--red:hover { background-color: var(--color-yellow-orange); }
+.social__icon--green:hover { background-color: var(--color-malibu); }
+.social__icon--yellow:hover { background-color: var(--color-coral-red); }
+.social__icon--orange:hover { background-color: var(--color-lavender); }
+.social__icon--purple:hover { background-color: var(--color-cerulean); }
 
 /* Footer */
 footer {
@@ -87,30 +58,41 @@ footer {
   flex-direction: column;
 }
 
-.footer__link {
-  color: var(--color-wild-sand);
-  text-decoration: none;
-}
-
-.footer__link:not(:last-child) {
-  margin-right: 16px;
-}
-
-.footer__copy {
-  margin-top: 36px;
-}
+.footer__link { color: var(--color-wild-sand); text-decoration: none; }
+.footer__link:not(:last-child) { margin-right: 16px; }
+.footer__copy { margin-top: 36px; }
 
 /* Background Image Swap for GitHub */
-.social__icon[data-icon="github"] {
-  background-image: url('image/github.png');
-}
-
-.social__icon[data-icon="github"]:hover {
-  background-image: url('image/github-hover.png');
-}
+.social__icon[data-icon="github"] { background-image: url('image/github.png'); }
+.social__icon[data-icon="github"]:hover { background-image: url('image/github-hover.png'); }
 
 @media screen and (min-width: 1024px) {
-  .footer__copy {
-    margin-top: 0;
-  }
+  .footer__copy { margin-top: 0; }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-15px); }
+  60% { transform: translateY(-8px); }
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #0f8ed6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  font-size: 1.2em;
+  color: #ffcc00; /* Schimbă culoarea textului */
+  cursor: pointer;
+  transform: scale(1.1);
 }
